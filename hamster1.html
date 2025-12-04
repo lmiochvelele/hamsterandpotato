@@ -1,21 +1,68 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>薯泥成長日記</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>薯泥成長記錄</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- lightGallery CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
 </head>
 <body>
+  <a class="back" href="index.html">← 回首頁</a>
 
-<a class="back" href="index.html">← 回首頁</a>
+  <h1>🐹 薯泥</h1>
 
-<h1>🐹 薯泥 - 成長日記</h1>
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab('diary')">成長日記</button>
+    <button class="tab-button" onclick="openTab('health')">健檢紀錄</button>
+    <button class="tab-button" onclick="openTab('graduation')">畢業典禮</button>
+  </div>
 
-<div class="entry">
-    <h2>📅 2025/01/01</h2>
-    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg">
-    <p>第一天到家，好可愛！</p>
-</div>
+  <!-- Tab contents -->
+  <div id="diary" class="tab-content active">
+    <h2>📸 成長日記</h2>
+    <div id="photoGallery">
+      <!-- 範例圖片 -->
+      <a href="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg">
+        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="">
+      </a>
+      <a href="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100002.jpg">
+        <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100002.jpg" alt="">
+      </a>
+      <!-- 可依實際照片繼續增加 -->
+    </div>
+  </div>
+
+  <div id="health" class="tab-content">
+    <h2>🩺 健檢紀錄</h2>
+    <p>體重 / 健康狀況 / 日期 ...</p>
+  </div>
+
+  <div id="graduation" class="tab-content">
+    <h2>🎓 畢業典禮</h2>
+    <p>離開／回饋／其他紀錄 ...</p>
+  </div>
+
+  <!-- lightGallery JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+  <script>
+    lightGallery(document.getElementById('photoGallery'), {
+      speed: 300,
+      download: false
+    });
+  </script>
+
+  <!-- Tabs 切換功能 -->
+  <script>
+    function openTab(tabName) {
+      document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+      document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
+      document.getElementById(tabName).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
 
 </body>
 </html>
