@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>薯泥健檢紀錄</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="back" href="hamster1.html">← 回成長日記</a>
+  <h1>🐹 薯泥健檢紀錄</h1>
+
+  <p>日期 / 體重 / 健康狀況...</p>
+  <!-- 可放表格或列表 -->
+  <table>
+    <tr><th>日期</th><th>體重</th><th>健康狀況</th></tr>
+    <tr><td>2025/01/01</td><td>120g</td><td>良好</td></tr>
+    <tr><td>2025/02/01</td><td>125g</td><td>良好</td></tr>
+  </table>
+</body>
+</html>
