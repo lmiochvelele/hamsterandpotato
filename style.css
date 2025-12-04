@@ -97,9 +97,11 @@ p {
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 
-/* 返回首頁按鈕 */
+/* 左上角返回首頁按鈕 */
 .back {
-    display: inline-block;
+    position: fixed;     /* 固定在畫面上 */
+    top: 20px;           /* 距離上方 20px */
+    left: 20px;          /* 距離左邊 20px */
     padding: 10px 20px;
     border-radius: 25px;
     background: linear-gradient(135deg, #ffe0b2, #ffb74d);
@@ -108,8 +110,15 @@ p {
     text-decoration: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
-    margin-bottom: 20px;
+    z-index: 1000;       /* 確保在最上層 */
 }
+
+.back:hover {
+    background: linear-gradient(135deg, #ffcc80, #ff9800);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
 
 .back:hover {
     background: linear-gradient(135deg, #ffcc80, #ff9800);
