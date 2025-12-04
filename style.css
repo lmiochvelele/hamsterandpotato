@@ -42,13 +42,13 @@ p {
 
 /* 滑鼠移過時放大 */
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /* 鼠鼠圖片 */
 .card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     border-radius: 12px;
 }
