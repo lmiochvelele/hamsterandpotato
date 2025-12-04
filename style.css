@@ -33,7 +33,7 @@ p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto; /* 讓整個區塊置中 */
 }
 
@@ -49,13 +49,13 @@ p {
 
 /* 滑鼠移過時放大 */
 .card:hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
 /* 鼠鼠圖片 */
 .card img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     border-radius: 12px;
 }
