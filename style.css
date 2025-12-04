@@ -73,3 +73,31 @@ iframe {
     display: block;
 }
 
+.photo-group {
+    display: flex;
+    gap: 20px;           /* 左右間距 */
+    margin-bottom: 50px;  /* 每組區塊間距 */
+    flex-wrap: wrap;      /* 手機版自動上下排列 */
+}
+
+/* 左邊照片區 */
+.group-photos {
+    flex: 3 1 600px;               /* 照片占多一點寬度 */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 每行 5 張照片 */
+    gap: 10px;
+}
+
+/* 右邊文字區 */
+.group-text {
+    flex: 1 1 250px;   /* 文字區占剩餘寬度 */
+    max-width: 300px;
+    text-align: left;
+}
+
+/* 照片樣式 */
+.group-photos img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
