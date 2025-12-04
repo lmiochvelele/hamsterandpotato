@@ -1,96 +1,79 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>薯泥畢業典禮</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: "Microsoft JhengHei", sans-serif;
-      padding: 20px;
-      background-color: #fff8e8;
-      text-align: center;
-    }
+<meta charset="UTF-8">
+<title>薯泥畢業典禮</title>
+<style>
+body { font-family: "Microsoft JhengHei", sans-serif; text-align: center; padding: 20px; background-color: #fff8e8; }
+h1 { margin-top: 60px; color: #d67b33; }
 
-    h1 {
-      color: #d67b33;
-      margin-top: 80px;
-    }
+.back-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffe0b2, #ffb74d);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    p, ul {
-      margin: 20px auto;
-      max-width: 800px;
-      font-size: 16px;
-      line-height: 1.6;
-    }
+.middle-btn {
+    display: inline-block;
+    margin: 20px auto 40px auto;
+    padding: 12px 28px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffd1a4, #ff8c42);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    /* 左上角返回首頁按鈕 */
-    .back-home {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        padding: 10px 20px;
-        border-radius: 25px;
-        background: linear-gradient(135deg, #ffe0b2, #ffb74d);
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        transition: all 0.3s ease;
-        z-index: 1000;
-    }
+.bottom-btn {
+    display: inline-block;
+    margin: 30px auto 20px auto;
+    padding: 12px 28px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #555555, #333333);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    .back-home:hover {
-        background: linear-gradient(135deg, #ffcc80, #ff9800);
-        transform: translateY(-2px) scale(1.05);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-    }
-
-    /* 中間返回成長日記按鈕 */
-    .back-diary {
-        display: inline-block;
-        margin: 30px auto 0 auto;
-        padding: 12px 28px;
-        border-radius: 25px;
-        background: linear-gradient(135deg, #ffd1a4, #ff8c42);
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        transition: all 0.3s ease;
-    }
-
-    .back-diary:hover {
-        background: linear-gradient(135deg, #ffb473, #ff6f1e);
-        transform: translateY(-2px) scale(1.05);
-        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-    }
-  </style>
+img {
+    max-width: 90%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 12px;
+}
+</style>
 </head>
 <body>
 
-  <!-- 左上角返回首頁 -->
-  <a class="back-home" href="index.html">← 回首頁</a>
+<a class="back-home" href="index.html">← 回首頁</a>
 
-  <h1>🐹 薯泥畢業典禮</h1>
+<h1>🐹 薯泥畢業典禮</h1>
 
-  <p>歡迎回顧薯泥的畢業紀錄：</p>
-<!--
-  <ul>
-    <li>2025/05/01：完成社交訓練，健康狀態良好 🐹</li>
-    <li>2025/06/01：參加小型鼠鼠派對 🎉</li>
-    <li>2025/07/01：結束育成日記，進入自由生活 ✨</li>
-  </ul> 
+<!-- 中間返回成長日記 -->
+<a class="middle-btn" href="hamster1.html">← 回成長日記</a>
+
+<!-- 假設畢業照片 -->
+<img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/400001.jpg" alt="畢業典禮照片">
+
+  <!--
+<ul>
+<li>2025/05/01：完成社交訓練，健康狀態良好 🐹</li>
+<li>2025/06/01：參加小型鼠鼠派對 🎉</li>
+<li>2025/07/01：結束育成日記，進入自由生活 ✨</li>
+</ul>
+-->
   
-  
-  -->
- 
-
-  <p>感謝你的陪伴與支持！希望薯泥的日記給你帶來歡樂 ❤️</p>
-
-  <!-- 中間返回成長日記 -->
-  <a class="back-diary" href="hamster1.html">← 回成長日記</a>
+<!-- 最下面按鈕 -->
+<a class="bottom-btn" href="hamster1.html">← 回成長日記</a>
 
 </body>
 </html>
