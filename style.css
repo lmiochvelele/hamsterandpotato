@@ -21,13 +21,20 @@ p {
     margin-bottom: 30px;
 }
 
-/* 鼠鼠卡片排列（四宮格） */
+/* 手機版（預設）2 欄 */
 .grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 1000px;
-    margin: 0 auto; /* 讓整個區塊置中 */
+    margin: 0 auto;
+}
+
+/* 電腦版：切換成 4 欄 */
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* 每一張卡片 */
