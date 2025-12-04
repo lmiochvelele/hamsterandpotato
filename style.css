@@ -72,39 +72,4 @@ iframe {
     margin: 20px auto;
     display: block;
 }
-/* 包住整個左右區塊 */
-.info-wrapper {
-    display: flex;
-    align-items: flex-start;   /* 使兩者頂端對齊 */
-    justify-content: center;   /* 置中整個區塊 */
-    gap: 30px;                 /* 左右間距 */
-    margin: 60px auto;
-    max-width: 1000px;         /* 最大寬度 */
-}
 
-  /* 基本資料卡片 */
-        .info-card {
-            width: 80%;
-            max-width: 300px;
-            background: #FFE4CA;
-            margin: 80px auto 20px;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        }
-
-/* 卡片裡文字風格 */
-.info-card h2 {
-    margin-top: 0;
-}
-
-/* 右邊照片區塊 */
-.info-photo {
-    width: 45%;
-}
-
-.info-photo img {
-    width: 100%;
-    border-radius: 20px;
-    display: block;
-}
