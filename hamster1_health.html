@@ -9,12 +9,12 @@
       font-family: "Microsoft JhengHei", sans-serif;
       padding: 20px;
       background-color: #fff8e8;
+      text-align: center;
     }
 
     h1 {
-      text-align: center;
       color: #d67b33;
-      margin-top: 60px;
+      margin-top: 80px;
     }
 
     table {
@@ -39,7 +39,7 @@
     }
 
     /* 左上角返回首頁按鈕 */
-    .back {
+    .back-home {
         position: fixed;
         top: 20px;
         left: 20px;
@@ -54,15 +54,38 @@
         z-index: 1000;
     }
 
-    .back:hover {
+    .back-home:hover {
         background: linear-gradient(135deg, #ffcc80, #ff9800);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+    /* 中間返回成長日記按鈕 */
+    .back-diary {
+        display: inline-block;
+        margin: 30px auto 0 auto;
+        padding: 12px 28px;
+        border-radius: 25px;
+        background: linear-gradient(135deg, #ffd1a4, #ff8c42);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+
+    .back-diary:hover {
+        background: linear-gradient(135deg, #ffb473, #ff6f1e);
         transform: translateY(-2px) scale(1.05);
         box-shadow: 0 6px 12px rgba(0,0,0,0.25);
     }
   </style>
 </head>
 <body>
-  <a class="back" href="index.html">← 回首頁</a>
+
+  <!-- 左上角返回首頁 -->
+  <a class="back-home" href="index.html">← 回首頁</a>
 
   <h1>🐹 薯泥健檢紀錄</h1>
 
@@ -72,5 +95,9 @@
     <tr><td>2025/02/01</td><td>125g</td><td>良好</td></tr>
     <tr><td>2025/03/01</td><td>130g</td><td>良好</td></tr>
   </table>
+
+  <!-- 中間返回成長日記 -->
+  <a class="back-diary" href="hamster1.html">← 回成長日記</a>
+
 </body>
 </html>
