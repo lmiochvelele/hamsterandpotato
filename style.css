@@ -61,3 +61,38 @@ p {
     font-size: 36px;
     color: #b65c22;
 }
+
+/* Tabs 容器 */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap; /* 手機自動換行 */
+}
+
+/* 精緻按鈕 */
+.tab-button {
+    padding: 12px 28px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffd1a4, #ff8c42);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* hover 效果 */
+.tab-button:hover {
+    background: linear-gradient(135deg, #ffb473, #ff6f1e);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* active 狀態 */
+.tab-button.active {
+    background: linear-gradient(135deg, #ff8c42, #ff5722);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
