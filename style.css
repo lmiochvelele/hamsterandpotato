@@ -96,3 +96,23 @@ p {
     background: linear-gradient(135deg, #ff8c42, #ff5722);
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
+
+/* 返回首頁按鈕 */
+.back {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ffe0b2, #ffb74d);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    background: linear-gradient(135deg, #ffcc80, #ff9800);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
