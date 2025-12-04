@@ -72,3 +72,52 @@ iframe {
     margin: 20px auto;
     display: block;
 }
+/* 外層：控制兩個卡片的排版 */
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    margin: 60px auto;
+    flex-wrap: wrap; /*手機版會自動變上下排列*/
+}
+
+/* 基本資料卡片（你原本的改版：手帳風） */
+.info-card {
+    width: 260px;
+    background: #FFE8C8;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 2px dashed #D28B36; /* 手帳常見的虛線框 */
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 右側照片卡片：相片紙手帳風 */
+.photo-card {
+    position: relative;
+    width: 200px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transform: rotate(-2deg); /* 手帳式微微歪掉更可愛 */
+}
+
+/* 相片本體 */
+.photo-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 手帳風紙膠帶 */
+.photo-card .tape {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    width: 80px;
+    height: 25px;
+    background: #ffdb74aa; /* 半透明紙膠帶感 */
+    transform: rotate(5deg);
+    border-radius: 4px;
+}
