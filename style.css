@@ -82,15 +82,16 @@ iframe {
     max-width: 1000px;         /* 最大寬度 */
 }
 
-/* 基本資料卡片 */
-.info-card {
-    width: 45%;
-    background: #EA7500;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    color: white;
-}
+  /* 基本資料卡片 */
+        .info-card {
+            width: 80%;
+            max-width: 300px;
+            background: #FFE4CA;
+            margin: 80px auto 20px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
 
 /* 卡片裡文字風格 */
 .info-card h2 {
