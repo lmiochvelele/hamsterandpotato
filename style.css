@@ -79,7 +79,7 @@ iframe {
     align-items: flex-start;
     gap: 25px;
     margin: 60px auto;
-    flex-wrap: wrap; /*手機版會自動變上下排列*/
+    
 }
 
 /* 基本資料卡片（你原本的改版：手帳風） */
