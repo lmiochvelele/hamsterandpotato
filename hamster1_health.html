@@ -2,20 +2,75 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>薯泥健檢紀錄</title>
+  <title>鼠鼠 1 號 健檢紀錄</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      padding: 20px;
+      background-color: #fff8e8;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d67b33;
+      margin-top: 60px;
+    }
+
+    table {
+      margin: 50px auto 0 auto; /* 避免被固定按鈕遮住 */
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 800px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    th {
+      background-color: #ffd1a4;
+    }
+
+    /* 左上角返回首頁按鈕 */
+    .back {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        border-radius: 25px;
+        background: linear-gradient(135deg, #ffe0b2, #ffb74d);
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .back:hover {
+        background: linear-gradient(135deg, #ffcc80, #ff9800);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+  </style>
 </head>
 <body>
   <a class="back" href="index.html">← 回首頁</a>
-  <a class="back" href="hamster1.html">← 回薯泥成長日記</a>
-  <h1>🐹 薯泥健檢紀錄</h1>
 
-  <p>日期 / 體重 / 健康狀況...</p>
-  <!-- 可放表格或列表 -->
+  <h1>🐹 鼠鼠 1 號 健檢紀錄</h1>
+
   <table>
     <tr><th>日期</th><th>體重</th><th>健康狀況</th></tr>
     <tr><td>2025/01/01</td><td>120g</td><td>良好</td></tr>
     <tr><td>2025/02/01</td><td>125g</td><td>良好</td></tr>
+    <tr><td>2025/03/01</td><td>130g</td><td>輕微感冒</td></tr>
   </table>
 </body>
 </html>
