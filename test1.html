@@ -67,22 +67,44 @@
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
   }
 
-  /* 照片置中 */
-.memorial-gallery {
-  display: flex;          /* 使用彈性排列 */
-  flex-wrap: wrap;        /* 自動換行 */
-  justify-content: center; /* 置中排列整行 */
-  gap: 20px;              /* 圖片間距 */
-  margin: 30px auto;      /* 與上下區塊間距 */
-}
+  /* -------------------- */
+  /* 回憶照片區塊 */
+  /* -------------------- */
+  .memorial-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+  }
 
-.memorial-gallery img {
-  width: 200px;           /* 每張固定寬度 */
-  height: 200px;          /* 每張固定高度 */
-  object-fit: cover;      /* 自動裁切保持比例 */
-  border-radius: 8px;    /* 圓角 */
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-}
+  .memorial-gallery .photo-card {
+    width: 220px;
+    text-align: center;
+  }
+
+  .memorial-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .memorial-gallery p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #5a3e2b;
+  }
+
+  .memorial-photo,
+  iframe {
+    display: block;
+    margin: 25px auto;
+    max-width: 80%;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  }
 
 
 
@@ -146,16 +168,30 @@
 我們會永遠記得你的可愛模樣，也會把你的故事好好收藏。
 </p>
 
-<!-- 告別式照片 -->
-<!-- 照片區塊 -->
+<!-- 回憶照片區塊 -->
 <div class="memorial-gallery">
-  <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="薯泥回憶1">
-  <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="薯泥回憶2">
-  <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="薯泥回憶3">
-  <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="薯泥回憶4">
-  <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="薯泥回憶5">
-  <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="薯泥回憶6">
+  <div class="photo-card">
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="回憶1">
+    <p>第一次探索新家</p>
+  </div>
+  <div class="photo-card">
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="回憶2">
+    <p>喜歡的零食時光</p>
+  </div>
+  <div class="photo-card">
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="回憶3">
+    <p>跑輪快樂瞬間</p>
+  </div>
+  <div class="photo-card">
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="回憶4">
+    <p>小睡覺日常</p>
+  </div>
+  <div class="photo-card">
+    <img src="https://raw.githubusercontent.com/lmiochvelele/hamsterandpotato/main/100001.jpg" alt="回憶5">
+    <p>最後的擁抱</p>
+  </div>
 </div>
+
 
 
 <!-- 小倉鼠裝飾 -->
