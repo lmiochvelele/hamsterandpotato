@@ -1,135 +1,87 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<title>薯泥健檢紀錄</title>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>健檢紀錄</title>
 <style>
   body {
-    font-family: "Noto Sans TC", sans-serif;
-    background: #fff8e8;
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: #f2f2f2; /* 柔和灰白底色 */
     margin: 0;
     padding: 20px;
-    line-height: 1.7;
-    color: #4a3b2a;
-  }
-
-  /* 返回首頁 */
-  .back-home {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #ffd1a4, #ff8c42);
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 
   h1 {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 20px;
     font-size: 36px;
-    color: #493827;
+    color: #333;
   }
 
-  /* 每一次健檢的大外框 */
-  .check-card {
-    background: #ffffff;
-    border: 3px solid #e8d5b9;
-    border-radius: 16px;
-    max-width: 850px;
+  .section {
+    max-width: 900px;
     margin: 30px auto;
-    padding: 20px 25px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  }
-
-  .check-card h2 {
-    font-size: 22px;
-    color: #6b4f3a;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  /* 健檢照片 */
-  .check-photo {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 15px auto;
+    background: #ffffff;
+    padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
-  /* 文字區塊 */
-  .section-title {
-    font-weight: bold;
-    margin-top: 15px;
-    color: #8b6c50;
-  }
-
-  /* 可愛插圖置中 */
-  .hamster-icon {
+  .photo-box {
     text-align: center;
-    font-size: 40px;
-    margin-top: 15px;
+    margin: 20px 0;
   }
 
+  .photo-box img {
+    width: 70%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  .title-label {
+    font-weight: bold;
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 8px;
+  }
+
+  .content-text {
+    font-size: 18px;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
 </style>
 </head>
 <body>
 
-<a class="back-home" href="index.html">← 回首頁</a>
+<h1>健檢紀錄</h1>
 
-<h1>🐹 薯泥健檢紀錄</h1>
-
-<!-- 🐹 第一次健檢 -->
-<div class="check-card">
-  <h2>🐹 2025 / 01 / 05 健檢紀錄</h2>
-
-  <img src="images/check1.jpg" class="check-photo" alt="健檢照片">
-
-  <p class="section-title">📌 醫生建議：</p>
-  <p>體重偏輕一點，可以再增加每日食量，也要適度補充新鮮蔬菜。</p>
-
-  <p class="section-title">📌 飼主心得：</p>
-  <p>薯泥今天在診間很乖，一直抓著我的手不放，好可愛。</p>
-
-  <div class="hamster-icon">🐹💛</div>
+<!-- 日期 -->
+<div class="section">
+  <div class="title-label">健檢日期</div>
+  <div class="content-text">2025 / 01 / 15</div>
 </div>
 
-<!-- 🐹 第二次健檢 -->
-<div class="check-card">
-  <h2>🐹 2025 / 02 / 20 健檢紀錄</h2>
-
-  <img src="images/check2.jpg" class="check-photo" alt="健檢照片">
-
-  <p class="section-title">📌 醫生建議：</p>
-  <p>體重維持良好，牙齒正常，活動力佳，可以持續目前的飲食。</p>
-
-  <p class="section-title">📌 飼主心得：</p>
-  <p>今天薯泥被量體重時一直扭，醫生說他超級有活力 XD</p>
-
-  <div class="hamster-icon">🐹🌼</div>
+<!-- 健檢內容照片 -->
+<div class="section">
+  <div class="title-label">健檢內容照片</div>
+  <div class="photo-box">
+    <img src="你的照片網址" alt="健檢照片" />
+  </div>
 </div>
 
-<!-- 🐹 第三次健檢 -->
-<div class="check-card">
-  <h2>🐹 2025 / 03 / 18 健檢紀錄</h2>
+<!-- 醫生建議 -->
+<div class="section">
+  <div class="title-label">醫生建議</div>
+  <div class="content-text">請填入醫生的建議內容</div>
+</div>
 
-  <img src="images/check3.jpg" class="check-photo" alt="健檢照片">
-
-  <p class="section-title">📌 醫生建議：</p>
-  <p>稍微胖了一點，建議減少葵瓜子，讓牠多跑滾輪。</p>
-
-  <p class="section-title">📌 飼主心得：</p>
-  <p>薯泥看起來圓滾滾的，但真的太可愛了…</p>
-
-  <div class="hamster-icon">🐹✨</div>
+<!-- 心得 -->
+<div class="section">
+  <div class="title-label">心得紀錄</div>
+  <div class="content-text">請填入你的心得或記錄</div>
 </div>
 
 </body>
