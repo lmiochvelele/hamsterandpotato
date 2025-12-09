@@ -81,17 +81,26 @@ h1 {
 }
 
 /* -------------------- */
-.card {
-    background: rgba(255, 246, 229, 0.9); /* 半透明背景 */
+.card-container {
+  display: flex;           /* 啟用彈性排版 */
+  flex-wrap: wrap;         /* 超過一行就換行 */
+  gap: 20px;               /* 卡片間距 */
+  justify-content: center; /* 水平置中 */
+  max-width: 1200px;       /* 父容器最大寬度 */
+  margin: 0 auto;          /* 水平置中父容器 */
+}
+
+ .card {
+    background: #fff6e5;
     border: 3px dashed #d9b26f;
     padding: 20px;
     border-radius: 15px;
     position: relative;
     margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 30%;            /* 每個卡片約佔 30% 寬度 → 一排最多 3 個 */
+    box-sizing: border-box; /* 包含 padding 與 border */
 }
+
 
 /* 四角小插圖，透明背景 */
 .card .corner-icon {
@@ -229,6 +238,7 @@ iframe {
 </p>
 
 <!-- 回憶卡片示例 -->
+<div class="card-container">
 <div class="card">
     <h2>🐹 回憶 1</h2>
     <p>這是一段溫暖的回憶文字說明</p>
@@ -273,7 +283,7 @@ iframe {
     <img src="flower_himawari_mark.png" class="corner-icon bottom-left" alt="icon">
     <img src="flower_himawari_mark.png" class="corner-icon bottom-right" alt="icon">
 </div>
-
+</div>
 
     
 <!-- 影片 -->
