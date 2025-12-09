@@ -71,25 +71,70 @@ body {
         box-shadow: 0 3px 6px rgba(0,0,0,0.25);
     }
 
-    /* ✦ F：向日葵花瓣飄落效果 */
-    @keyframes fall {
-        0% { transform: translateY(-50px) rotate(0deg); opacity: 1; }
-        100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
-    }
+    <style>
+/* ✦ 1. 花瓣下落動畫 */
+@keyframes fall {
+    0%   { transform: translateY(-50px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(800px) rotate(360deg); opacity: 0; }
+}
 
-    .petal {
-        position: fixed;
-        top: -50px;
-        width: 25px;
-        height: 25px;
-        background-image: url('sakura_fubuki.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        animation: fall linear infinite;
-        opacity: 0.8;
-        pointer-events: none;
-        z-index: 999;
-    }
+/* ✦ 2. 花瓣基礎樣式 */
+.petal {
+    position: fixed;
+    top: -50px;
+    width: 25px;
+    height: 25px;
+    background-image: url('sakura_fubuki.png'); /* 你的花瓣圖片 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 999;
+}
+</style>
+
+<script>
+// ✦ 可調參數 ✦
+const PETAL_COUNT = 40;      // ← 密度（越大越多）
+const MIN_SPEED = 6;         // ← 最慢下落秒數
+const MAX_SPEED = 12;        // ← 最快下落秒數
+const MIN_SIZE  = 18;        // ← 最小尺寸( px )
+const MAX_SIZE  = 32;        // ← 最大尺寸( px )
+
+function createPetal() {
+    const petal = document.createElement("div");
+    petal.classList.add("petal");
+
+    // 隨機大小
+    let size = Math.random() * (MAX_SIZE - MIN_SIZE) + MIN_SIZE;
+    petal.style.width = size + "px";
+    petal.style.height = size + "px";
+
+    // 隨機水平位置
+    petal.style.left = Math.random() * 100 + "vw";
+
+    // 隨機下落時間（速度）
+    let duration = Math.random() * (MAX_SPEED - MIN_SPEED) + MIN_SPEED;
+    petal.style.animationDuration = duration + "s";
+
+    // 隨機延遲
+    petal.style.animationDelay = Math.random() * 5 + "s";
+
+    document.body.appendChild(petal);
+
+    // 動畫結束後移除
+    setTimeout(() => {
+        petal.remove();
+        createPetal(); // 持續補充花瓣
+    }, duration * 1000);
+}
+
+// 產生花瓣
+for (let i = 0; i < PETAL_COUNT; i++) {
+    createPetal();
+}
+</script>
+
 </style>
 </head>
 <body>
