@@ -66,10 +66,19 @@ body {
     }
 
     .gallery img {
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.25);
-    }
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    margin-top: -20px;       /* 負值讓圖片往上頂到卡片邊框上方 */
+    z-index: 1;               /* 確保圖片在框上方，但文字在圖片上方 */
+}
+.card h2, .card p {
+    position: relative;      /* 讓文字可以被 top/margin 調整 */
+    z-index: 2;              /* 確保文字在背景上方 */
+    text-align: center;      /* 置中 */
+    margin: 10px 0;
+}
+
 
     <style>
 /* ✦ 1. 花瓣下落動畫 */
@@ -153,6 +162,13 @@ for (let i = 0; i < PETAL_COUNT; i++) {
             <img src="img1.jpg" alt="幼年薯泥">
             <img src="img2.jpg" alt="成長中的薯泥">
             <img src="img3.jpg" alt="少年薯泥">
+            <img src="img4.jpg" alt="成熟的薯泥">
+            <img src="img4.jpg" alt="成熟的薯泥">
+            <img src="img4.jpg" alt="成熟的薯泥">
+            <img src="img4.jpg" alt="成熟的薯泥">
+            <img src="img4.jpg" alt="成熟的薯泥">
+            <img src="img4.jpg" alt="成熟的薯泥">
+            <img src="img4.jpg" alt="成熟的薯泥">
             <img src="img4.jpg" alt="成熟的薯泥">
         </div>
     </div>
