@@ -81,9 +81,8 @@ h1 {
 }
 
 /* -------------------- */
-/* 回憶卡片風格，四角小插圖 */
 .card {
-    background: #fff6e5;
+    background: rgba(255, 246, 229, 0.9); /* 半透明背景 */
     border: 3px dashed #d9b26f;
     padding: 20px;
     border-radius: 15px;
@@ -94,36 +93,26 @@ h1 {
     margin-right: auto;
 }
 
-/* 四角小插圖 */
+/* 四角小插圖，透明背景 */
 .card .corner-icon {
     position: absolute;
     width: 40px;
     height: 40px;
+    pointer-events: none; /* 不影響滑鼠點擊 */
+    opacity: 0.6; /* 半透明 */
 }
 
 /* 左上角 */
-.card .corner-icon.top-left {
-    top: -20px;    /* 超出框線 */
-    left: -20px;
-}
+.card .corner-icon.top-left { top: 0; left: 0; }
 
 /* 右上角 */
-.card .corner-icon.top-right {
-    top: -20px;
-    right: -20px;
-}
+.card .corner-icon.top-right { top: 0; right: 0; }
 
 /* 左下角 */
-.card .corner-icon.bottom-left {
-    bottom: -20px;
-    left: -20px;
-}
+.card .corner-icon.bottom-left { bottom: 0; left: 0; }
 
 /* 右下角 */
-.card .corner-icon.bottom-right {
-    bottom: -20px;
-    right: -20px;
-}
+.card .corner-icon.bottom-right { bottom: 0; right: 0; }
 
 
 /* 回憶照片 */
@@ -212,8 +201,8 @@ iframe {
 .petal {
     position: fixed;
     top: -50px;
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     background-image: url('sasasakura.png'); /* 花瓣圖 */
     background-size: contain;
     background-repeat: no-repeat;
