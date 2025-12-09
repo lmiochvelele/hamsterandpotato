@@ -12,14 +12,27 @@
         background-size: 300px; /* 調整密度：越小越密，越大越稀 */
         padding: 0;
     }
-body {
-    background-image: url("bg_himawari_hatake.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom center; /* 固定在最底部 */
-    background-size: cover;             /* 讓圖片寬度自動填滿 */
-    background-attachment: fixed;       /* 背景固定不動 */
-    background-color: #B4A08D;          /* 若圖片太短，背景用底色補 */
+body::before {
+    content: "";
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bg_himawari_hatake.png') no-repeat bottom;
+    background-size: cover;
+    z-index: -2; /* 放到最底層 */
 }
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.4); /* 半透明白色遮罩，調整透明度 */
+    z-index: -1;
+}
+
 
     .container {
         max-width: 900px;
