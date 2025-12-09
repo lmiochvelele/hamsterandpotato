@@ -100,6 +100,9 @@ h1 {
     width: 30%;            /* 每個卡片約佔 30% 寬度 → 一排最多 3 個 */
     box-sizing: border-box; /* 包含 padding 與 border */
 }
+@media (max-width: 768px) {
+  .card { width: 80%; } /* 手機一排只顯示一個 */
+}
 
 
 /* 四角小插圖，透明背景 */
